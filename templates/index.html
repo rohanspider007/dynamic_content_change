@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="chg"><h1>it going to be change...</h1></div>
+	<button id="btn" >click</button>
+
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			$('#btn').click(function(){
+				$('#chg').load('{% url 'data' %}');
+			})
+		});
+
+	</script>
+</body>
+</html>
